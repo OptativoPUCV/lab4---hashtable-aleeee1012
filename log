@@ -152,3 +152,9 @@ hashmap.c:48:8: error: unused variable ‘codigo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 b7bff6d
+Fri 14 Apr 2023 09:23:50 PM UTC: 
+ hashmap.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+ tests:  1|5
+total_score: 10/70
+5c90424
