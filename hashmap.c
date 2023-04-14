@@ -46,11 +46,12 @@ void insertMap(HashMap * map, char * key, void * value)
 {
   long codigo = hash(key, map->capacity);
   
-  for(long i = 0; i != codigo; i++)
+  while(1)
   {
-    if(is_equal(map->buckets[i], key) == 0)
+    if(is_equal(map->buckets[codigo], key) == 0)
     {
       printf("a");
+      break;
     }
   }
 }
