@@ -53,13 +53,12 @@ void enlarge(HashMap * map)
   enlarge_called = 1; //no borrar (testing purposes)
 }
 
-
 HashMap * createMap(long capacity)
 {
   HashMap *mapa = (HashMap*) malloc(sizeof(HashMap));
-  mapa->buckets = (Pair**) malloc(sizeof(Pair*));
+  mapa->buckets = (Pair**) malloc(capacity * sizeof(Pair*));
   mapa->size = 0;
-  mapa->capacity = 0;
+  mapa->capacity = capacity;
   mapa->current = -1;
   return mapa;
 }
