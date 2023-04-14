@@ -30,7 +30,7 @@ long hash( char * key, long capacity)
   char * ptr;
   for (ptr = key; *ptr != '\0'; ptr++)
   {
-    ash += hash*32 + tolower(*ptr);
+    hash += hash*32 + tolower(*ptr);
   }
   return hash%capacity;
 }
