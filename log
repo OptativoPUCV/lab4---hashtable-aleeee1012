@@ -186,3 +186,14 @@ hashmap.c:51:12: error: assignment to ‘long int’ from ‘Pair *’ makes int
 cc1: all warnings being treated as errors
 Compilation failed
 a65c0b6
+Fri 14 Apr 2023 09:32:47 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:18: error: assignment to ‘Pair **’ from ‘long int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   50 |     map->buckets = codigo;
+      |                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+184f771
