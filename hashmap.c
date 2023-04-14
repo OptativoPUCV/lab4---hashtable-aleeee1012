@@ -50,7 +50,7 @@ void insertMap(HashMap * map, char * key, void * value)
   {
     if(is_equal(map->buckets[codigo], key) == 0)
     {
-      map->buckets[codigo] = codigo;
+      //map->buckets[codigo] = codigo;
       break;
     }
   }

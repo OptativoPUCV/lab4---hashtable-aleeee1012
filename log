@@ -275,3 +275,9 @@ hashmap.c:53:28: error: assignment to ‘Pair *’ from ‘long int’ makes poi
 cc1: all warnings being treated as errors
 Compilation failed
 a7f6b3f
+Fri 14 Apr 2023 09:48:21 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+8177506
