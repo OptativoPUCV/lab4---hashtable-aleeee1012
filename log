@@ -130,3 +130,14 @@ hashmap.c:48:8: error: unused variable ‘clave’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d06721e
+Fri 14 Apr 2023 09:22:07 PM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:8: error: variable ‘clave’ set but not used [-Werror=unused-but-set-variable]
+   48 |   long clave;
+      |        ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5e934ae
