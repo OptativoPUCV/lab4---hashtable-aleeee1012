@@ -158,3 +158,17 @@ Fri 14 Apr 2023 09:23:50 PM UTC:
  tests:  1|5
 total_score: 10/70
 5c90424
+Fri 14 Apr 2023 09:29:41 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:51:12: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   51 |     codigo = createPair(key, value);
+      |            ^
+hashmap.c:48:8: error: variable ‘codigo’ set but not used [-Werror=unused-but-set-variable]
+   48 |   long codigo = hash(key, map->capacity);
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b45b12a
