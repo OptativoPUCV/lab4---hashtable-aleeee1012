@@ -46,7 +46,7 @@ int is_equal(void* key1, void* key2)
 void insertMap(HashMap * map, char * key, void * value)
 {
   long codigo = hash(key, map->capacity);
-  if(map->buckets == NULL)
+  if(map->buckets == codigo)
   {
     codigo = createPair(key, value);
   }

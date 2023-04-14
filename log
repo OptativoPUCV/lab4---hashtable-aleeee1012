@@ -172,3 +172,17 @@ hashmap.c:48:8: error: variable ‘codigo’ set but not used [-Werror=unused-bu
 cc1: all warnings being treated as errors
 Compilation failed
 b45b12a
+Fri 14 Apr 2023 09:30:27 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:49:19: error: comparison between pointer and integer [-Werror]
+   49 |   if(map->buckets == codigo)
+      |                   ^~
+hashmap.c:51:12: error: assignment to ‘long int’ from ‘Pair *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   51 |     codigo = createPair(key, value);
+      |            ^
+cc1: all warnings being treated as errors
+Compilation failed
+a65c0b6
