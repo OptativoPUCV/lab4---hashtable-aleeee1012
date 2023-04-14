@@ -216,3 +216,17 @@ hashmap.c:38:32: note: expected ‘void *’ but argument is of type ‘long int
 cc1: all warnings being treated as errors
 Compilation failed
 782378c
+Fri 14 Apr 2023 09:39:20 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:21: error: comparison between pointer and integer [-Werror]
+   48 |   for(long i = 0; i < map->buckets; i++)
+      |                     ^
+hashmap.c:50:34: error: invalid type argument of unary ‘*’ (have ‘long int’)
+   50 |     if(is_equal(map->buckets[i], *codigo) == 0)
+      |                                  ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5a5e26f
