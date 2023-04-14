@@ -141,3 +141,14 @@ hashmap.c:48:8: error: variable ‘clave’ set but not used [-Werror=unused-but
 cc1: all warnings being treated as errors
 Compilation failed
 5e934ae
+Fri 14 Apr 2023 09:23:10 PM UTC: 
+ hashmap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:8: error: unused variable ‘codigo’ [-Werror=unused-variable]
+   48 |   long codigo = hash(key, map->capacity);
+      |        ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b7bff6d
