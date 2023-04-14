@@ -45,7 +45,7 @@ int is_equal(void* key1, void* key2)
 
 void insertMap(HashMap * map, char * key, void * value)
 {
-
+  long clave = hash(key, map->capacity);
 }
 
 void enlarge(HashMap * map)
@@ -63,7 +63,8 @@ HashMap * createMap(long capacity)
   return mapa;
 }
 
-void eraseMap(HashMap * map,  char * key) {    
+void eraseMap(HashMap * map,  char * key)
+{    
 
 
 }

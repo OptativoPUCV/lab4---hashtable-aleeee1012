@@ -119,3 +119,14 @@ Fri 14 Apr 2023 09:17:11 PM UTC:
  tests:  1|5
 total_score: 10/70
 6bbbde1
+Fri 14 Apr 2023 09:21:17 PM UTC: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:48:8: error: unused variable ‘clave’ [-Werror=unused-variable]
+   48 |   long clave = hash(key, map->capacity);
+      |        ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d06721e
