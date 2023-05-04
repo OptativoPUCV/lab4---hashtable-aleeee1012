@@ -63,6 +63,7 @@ void enlarge(HashMap * map)
 HashMap * createMap(long capacity)
 {
   HashMap *mapa = (HashMap*) malloc(sizeof(HashMap));
+  
   mapa->buckets = (Pair**) malloc(capacity * sizeof(Pair*));
   mapa->size = 0;
   mapa->capacity = capacity;
@@ -71,15 +72,37 @@ HashMap * createMap(long capacity)
 }
 
 void eraseMap(HashMap * map,  char * key)
-{    
-
-
+{
+  Pair *dato = searchMap(map, key);
+  
+  if(dato != NULL)
+  {
+    dato->key = NULL;
+    map->size--;
+  }
 }
 
-Pair * searchMap(HashMap * map,  char * key) {   
+Pair * searchMap(HashMap * map,  char * key)
+{
+  long codigo = hash(key, map->capacity);
+  int i = 0;
 
-
-    return NULL;
+  while(i < map->capacity)
+  {
+    if(map->buckets[codigo] == NULL)
+    {
+      break;
+    }
+    
+    if(is_equal(map->buckets[codigo]->key, key))
+    {
+      map->current = codigo;
+      return map->buckets[codigo];
+    }
+    codigo = (codigo + 1) % map->capacity;
+    i++;
+  }
+  return NULL;
 }
 
 Pair * firstMap(HashMap * map) {

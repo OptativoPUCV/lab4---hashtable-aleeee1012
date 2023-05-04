@@ -287,3 +287,9 @@ Thu 04 May 2023 02:57:19 AM UTC:
  tests:  1|5
 total_score: 10/70
 51e446c
+Thu 04 May 2023 03:05:54 AM UTC: 
+ hashmap.c | 26 ++++++++++++++++++++++++--
+ 1 file changed, 24 insertions(+), 2 deletions(-)
+ tests:  7|3
+total_score: 30/70
+580051d
