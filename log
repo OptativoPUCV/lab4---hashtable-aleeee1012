@@ -428,3 +428,14 @@ hashmap.c:78:10: error: unused variable ‘oldBuckets’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 9b51236
+Thu 04 May 2023 03:35:52 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:82:17: error: assignment to ‘long int’ from ‘Pair **’ makes integer from pointer without a cast [-Werror=int-conversion]
+   82 |   map->capacity = (Pair**) calloc(map->capacity, sizeof(Pair*));
+      |                 ^
+cc1: all warnings being treated as errors
+Compilation failed
+24c8a44
