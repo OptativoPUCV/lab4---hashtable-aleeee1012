@@ -303,3 +303,9 @@ hashmap.c:55:46: error: invalid type argument of ‘->’ (have ‘int’)
       |                                              ^~
 Compilation failed
 f5ed6e6
+Thu 04 May 2023 03:12:47 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  11|2
+total_score: 50/70
+1b1e63a
