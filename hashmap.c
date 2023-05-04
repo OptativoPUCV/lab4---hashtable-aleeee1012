@@ -45,14 +45,30 @@ int is_equal(void* key1, void* key2)
 void insertMap(HashMap * map, char * key, void * value)
 {
   long codigo = hash(key, map->capacity);
-  
-  while(1)
+  int i = 0;
+
+  if(map->size > (map->capacity * 0.7)) //Si la capacidad ya esta sobre o cerca del 70%
   {
-    if(is_equal(map->buckets[codigo], key) == 0)
-    {
-      break;
-    }
+    enlarge(map);
   }
+
+  while(map->buckets[codigo] != NULL && i < i->capacity)
+  {
+    if(is_equal(map->buckets[codigo]->key, key))
+    {
+      return;
+    }
+    codigo = (codigo + 1) % map->capacity;
+    i++;
+  }
+
+  if(i == map->capacity)
+  {
+    return;
+  }
+  map->buckets[codigo] = createPair(key, value);
+  map->current = codigo;
+  map->size++;
 }
 
 void enlarge(HashMap * map)

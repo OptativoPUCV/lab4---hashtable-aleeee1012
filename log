@@ -293,3 +293,13 @@ Thu 04 May 2023 03:05:54 AM UTC:
  tests:  7|3
 total_score: 30/70
 580051d
+Thu 04 May 2023 03:12:36 AM UTC: 
+ hashmap.c | 22 +++++++++++++++++++---
+ 1 file changed, 19 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:55:46: error: invalid type argument of ‘->’ (have ‘int’)
+   55 |   while(map->buckets[codigo] != NULL && i < i->capacity)
+      |                                              ^~
+Compilation failed
+f5ed6e6
